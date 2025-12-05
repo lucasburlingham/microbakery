@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quintessential&display=swap');
+/* 
+ADDITIONAL RESETS
+*/
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	/* Use 100dvh for dynamic viewport height */
+	margin: 0;
+	/* Remove default body margin */
+}
+
+:root {
+	--primary-bg-color: #d8a47f;
+	--text-color: #333333;
+	--link-color: #df3b57;
+	--link-highlight-color: #ef8354;
+	--font-family: 'Inter', sans-serif;
+}
+
+.dm-serif-text-regular {
+	font-family: "DM Serif Text", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+	font-family: "DM Serif Text", serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+/*  <weight>: Use a value from 100 to 900 */
+/* <uniquifier>: Use a unique and descriptive class name */
+
+
+.edu-nsw-act-cursive-400 {
+	font-family: "Edu NSW ACT Cursive", cursive;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.inter-text-400 {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+/* 
+		HTML ELEMENTS
+*/
+
+a {
+	color: var(--link-color);
+	text-decoration: dotted underline 1px;
+}
+
+a,
+a:hover {
+	transition: color 0.5s ease-in, text-decoration 0.5s ease-in;
+}
+
+a:hover {
+	color: var(--link-highlight-color);
+	text-decoration: solid underline 2px;
+}
+
+h1 {
+	font-family: "DM Serif Text", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.5rem;
+	color: #df3b57;
+	display: block;
+	margin-top: 0.5rem;
+}
+
+h2 {
+	font-family: "DM Serif Text", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5rem;
+	color: #df3b57;
+}
+
+nav {
+	padding: 1rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+}
+
+nav li {
+	text-align: center;
+}
+
+nav a {
+	color: var(--text-color);
+	font-family: var(--font-family);
+	font-weight: 400;
+	text-decoration: none;
+	font-size: larger;
+	padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+	color: var(--link-highlight-color);
+}
+
+nav a:focus {
+	outline: 2px solid var(--link-highlight-color);
+}
+
+footer {
+	text-align: center;
+	padding: 1rem;
+	margin-top: 1em;
+	font-size: 0.9rem;
+	color: var(--text-color);
+	font-family: var(--font-family);
+
+	/* push to bottom */
+	position: relative;
+	bottom: 0;
+}
+
+section {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section:last-of-type {
+	flex-grow: 1;
+}
+
+#menu-section {
+	background-image: url('/assets/img/6604334.jpg');
+	background-size: repeat;
+}
+
+#menu {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	justify-items: center;
+}
+
+#about {
+	background-color: var(--primary-bg-color);
+	margin-top: 2rem;
+}
+
+
+/* 
+		STYLING CLASSES
+*/
+
+.text-primary {
+	color: var(--text-color);
+	font-family: var(--font-family);
+}
+
+.bg-primary {
+	background-color: var(--primary-bg-color);
+}
+
+.text-link {
+	color: var(--link-color);
+}
+
+.text-link-highlight {
+	color: var(--link-highlight-color);
+}
+
+.font-inter {
+	font-family: var(--font-family);
+}
+
+.font-dm-serif-text {
+	font-family: "DM Serif Text", serif;
+}
+
+.font-edu-nsw-act-cursive {
+	font-family: "Edu NSW ACT Cursive", cursive;
+}
+
+.font-quintessential {
+	font-family: "Quintessential", cursive;
+}
+
+.menu-item {
+	margin: 0 1rem;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: var(--text-color);
+
+	/* center the cards horizontally but only allow 3 across */
+	display: flexbox;
+	/* justify-items: center; */
+	/* grid-template-columns: minmax(100px, 1fr); */
+
+	/* make the card only as wide as the content */
+	width: 300px;
+	margin: auto;
+
+	/* Put transform on the default state */
+	transition: transform 0.2s ease-in-out;
+	border-radius: 10px;
+	box-shadow: #333333 1px 1px 3px;
+
+	margin-bottom: 1rem;
+	background-color: #fff8f0;
+}
+
+.menu-item>img {
+	/* center */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 290px;
+	border: 1px solid #030303;
+	border-radius: 12px;
+	box-shadow: 0 0 10px #ccc;
+}
+
+.menu-item>p {
+	/* margin-top: 0.5rem; */
+	margin-left: 0.5rem;
+	font-size: 1.1rem;
+	font-style: italic;
+}
+
+.menu-item>p.cost {
+	font-size: .5rem;
+	/* margin-top: 0.5rem; */
+	margin-left: 0.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.menu-item>h2 {
+	/* margin-top: 1rem; */
+	margin-left: 0.5rem;
+}
+
+.menu-item:focus,
+.menu-item:hover {
+	/* make the card lift */
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: #df3b57 2px 2px 6px;
+}
+
+button {
+	background-color: var(--link-color);
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: var(--font-family);
+	font-size: 1rem;
+	transition: background-color 0.3s ease-in-out;
+}
+
+/*
+		UTILITY CLASSES
+*/
+
+.text-center {
+	text-align: center;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.text-normal {
+	font-style: normal;
+}
