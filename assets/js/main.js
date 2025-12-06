@@ -56,7 +56,7 @@ function generateMenuItems(menuItems) {
 
 		const itemImage = document.createElement('img');
 		itemImage.src = item.image_url;
-		itemImage.alt = item.title;
+		itemImage.alt = item.alt_text || item.description || item.title;
 		itemImage.style.height = '200px';
 		itemImage.style.width = '200px';
 
