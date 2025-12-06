@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 /* 
 ADDITIONAL RESETS
 */
@@ -20,7 +21,7 @@ body {
 
 :root {
 	--primary-bg-color: #d8a47f;
-	--text-color: #333333;
+	--text-color: #191923;
 	--link-color: #9E1A30;
 	--link-highlight-color: #ef8354;
 	--font-family: 'Inter', sans-serif;
@@ -41,13 +42,12 @@ body {
 /*  <weight>: Use a value from 100 to 900 */
 /* <uniquifier>: Use a unique and descriptive class name */
 
-
-.edu-nsw-act-cursive-400 {
-	font-family: "Edu NSW ACT Cursive", cursive;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
+.meow-script-regular {
+  font-family: "Meow Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 .inter-text-400 {
 	font-family: "Inter", sans-serif;
@@ -60,6 +60,12 @@ body {
 /* 
 		HTML ELEMENTS
 */
+
+p {
+	font-family: var(--font-family);
+	color: var(--text-color);
+	line-height: 1.6;
+}
 
 a {
 	color: var(--link-color);
@@ -80,10 +86,10 @@ h1 {
 	font-family: "DM Serif Text", serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.5rem;
-	color: #df3b57;
+	font-size: 4rem;
+	color: #BC3E10;
 	display: block;
-	margin-top: 0.5rem;
+	margin-top: 0.25rem;
 }
 
 h2 {
@@ -91,7 +97,6 @@ h2 {
 	font-weight: 400;
 	font-style: normal;
 	font-size: 2.5rem;
-	color: #df3b57;
 }
 
 nav {
@@ -146,6 +151,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	color: var(--text-color);
 }
 
 section:last-of-type {
@@ -155,6 +161,10 @@ section:last-of-type {
 #menu-section {
 	background-image: url('../img/6604334.jpg');
 	background-size: repeat;
+}
+
+#menu-section > h2 {
+	color: #df3b57;
 }
 
 #menu {
