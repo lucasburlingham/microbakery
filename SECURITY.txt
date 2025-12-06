@@ -1,0 +1,7 @@
+Please respect the privacy and security of our users. Do not attempt to access or share any sensitive information without proper authorization. 
+
+
+# Security Policy
+If you discover a security vulnerability in our application, please report it to us immediately by using the contact information at lucasburlingham.me. 
+
+We take all reports seriously and will work to address any issues as quickly as possible. Thank you for helping us keep our application secure.
