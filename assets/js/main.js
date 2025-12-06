@@ -60,10 +60,11 @@ function generateMenuItems(menuItems) {
 		itemImage.style.height = '200px';
 		itemImage.style.width = '200px';
 
-		const itemTitle = document.createElement('h3');
+		const itemTitle = document.createElement('p');
 		itemTitle.id = `name-${item.sku}`;
-		// itemTitle.className = 'edu-nsw-act-cursive-400';
+		itemTitle.className = 'menu-item-title';
 		itemTitle.textContent = item.title;
+		itemTitle.ariaLabel = `Menu item: ${item.title}`;
 		const itemDescription = document.createElement('p');
 		itemDescription.className = 'inter-text-400';
 		itemDescription.textContent = item.description;
@@ -71,13 +72,18 @@ function generateMenuItems(menuItems) {
 		// remove dollar sign if present and convert to float
 		item.cost = parseFloat(item.cost.replace('$', ''));
 		const itemCost = document.createElement('p');
-		// add .cost class
+		// add .cost class for styling
 		itemCost.classList.add('cost');
+		itemCost.ariaLabel = `Price: $${item.cost.toFixed(2)} USD`;
 		itemCost.className = 'inter-text-400';
 		itemCost.innerHTML = `<strong>Price:</strong> $${item.cost.toFixed(2)}`;
 
 		const orderButton = document.createElement('button');
 		orderButton.textContent = 'Order Now';
+		orderButton.ariaLabel = `Order ${item.title} for $${item.cost.toFixed(2)}`;
+		orderButton.onclick = () => {
+			window.location.href = `order.html?sku=${item.sku}`;
+		};
 
 		menuItemDiv.appendChild(itemImage);
 		menuItemDiv.appendChild(itemTitle);
